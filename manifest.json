@@ -3,8 +3,12 @@
   "description": "A Chrome Extension that reminds you that you spent too much time YouTubing",
   "version": "1.0",
   "manifest_version": 3,
+  "icons": {
+    "16": "clock16.png",
+    "48": "clock48.png",
+    "128": "clock128.png"
+  },
   "action": {
-    "default_popup": "youtube_timer.html",
-    "default_icon": "timer.jpg"
+    "default_popup": "youtube_timer.html"
   }
 }
