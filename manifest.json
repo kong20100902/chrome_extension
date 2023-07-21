@@ -1,10 +1,10 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "Youtube Timer",
+  "description": "A Chrome Extension that reminds you that you spent too much time YouTubing",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "hello.html",
+    "default_popup": "youtube_timer.html",
     "default_icon": "hello_extensions.png"
   }
 }
