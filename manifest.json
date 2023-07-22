@@ -3,15 +3,19 @@
   "description": "A Chrome Extension that reminds you that you spent too much time YouTubing",
   "version": "1.0",
   "manifest_version": 3,
-  "icons": {
-    "16": "/images/clock16.png",
-    "48": "/images/clock48.png",
-    "128": "/images/clock128.png"
-  },
   "action": {
-    "default_popup": "youtube_timer.html"
+    "default_popup": "/popup/popup.html",
+    "default_icon": {
+      "16": "images/clock16.png",
+      "48": "images/clock48.png",
+      "128": "images/clock128.png"
+    },
+    "default_title": "Click Me"
   },
   "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://www.youtube.com/watch?v=*"
+  ],
   "background": {
     "service_worker": "service-worker.js"
   },
