@@ -4,11 +4,23 @@
   "version": "1.0",
   "manifest_version": 3,
   "icons": {
-    "16": "clock16.png",
-    "48": "clock48.png",
-    "128": "clock128.png"
+    "16": "/images/clock16.png",
+    "48": "/images/clock48.png",
+    "128": "/images/clock128.png"
   },
   "action": {
     "default_popup": "youtube_timer.html"
-  }
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.youtube.com/watch?v=*"
+      ]
+    }
+  ]
 }
